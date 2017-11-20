@@ -7,7 +7,7 @@ title: FUD Repeller
 	<p>My goal is to help people interested in Bitcoin and crypto assets to understand what is going in lay terms. <a href="/blog">Read my posts</a></p>
 	
 	<h1>Recent Posts</h1>
-	<ul class="posts noList">
+
 {% for post in paginator.posts %}
  <li>
   <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
@@ -15,7 +15,6 @@ title: FUD Repeller
    <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
  </li>
     {% endfor %}
-  </ul>
 	
 </div><!-- /.blurb -->
 

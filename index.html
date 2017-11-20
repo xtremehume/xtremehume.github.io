@@ -9,11 +9,11 @@ title: FUD Repeller
 	<h2>Recent Posts</h2>
 
 {% for post in paginator.posts %}
-<ul class="posts noList">
-  <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+
+  <span class="date nolist">{{ post.date | date: '%B %d, %Y' }}</span>
    <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
    <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
     {% endfor %}
-	</ul>	
+	
 </div><!-- /.blurb -->
 

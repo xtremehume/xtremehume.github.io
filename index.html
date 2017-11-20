@@ -6,4 +6,14 @@ title: FUD Repeller
 	<h1>FUD REPELLER</h1>
 	<p>My goal is to help people interested in Bitcoin and crypto assets to understand what is going in lay terms.</p>
 	<p>Check out my posts <a href="/blog">here</a></p>
+	
+	<ul class="posts noList">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html }}{% endif %}</p>
+      </li>
+    {% endfor %}
+  </ul>
 </div><!-- /.blurb -->
